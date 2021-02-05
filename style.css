@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --Linear-Gradient1: hsl(236, 72%, 79%);
+  --Linear-Gradient2: hsl(237, 63%, 64%);
+
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+* {
+  padding: 0;
+  /* margin: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  background: url(./images/bg-top.svg) no-repeat, url(./images/bg-bottom.svg) no-repeat;
+  background-color: var(--Very-Light-Grayish-Blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+h1,
+p {
+  color: var(--Dark-Grayish-Blue);
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+  padding-bottom: 1.2rem;
+}
+
+h2,
+h3,
+p {
+  color: var(--Grayish-Blue);
+}
+
+.monthly {
+  display: none;
+}
+
+.subscription {
+  display: flex;
+  margin: 0 0.5rem;
+}
+
+.subscription>p {
+  color: var(--Light-Grayish-Blue);
+}
+
+.plans {
+  display: flex;
+}
+
+.plans>.basic,
+.plans>.master {
+  background-color: #fff;
+  padding: 1.7rem;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.plans>.basic {
+  border-radius: 8px 0 0 8px;
+}
+
+.plans>.master {
+  border-radius: 0 8px 8px 0;
+}
+
+.plans>.pro {
+  background: linear-gradient(120deg, var(--Linear-Gradient1) 20%, var(--Linear-Gradient2) 100%);
+  padding: 2.5rem 1.7rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.plans>.pro h3,
+.plans>.pro h1,
+.plans>.pro p {
+  color: #fff;
+}
+
+.plans>.basic>button,
+.plans>.master>button {
+  padding: .7rem 5rem;
+  text-transform: uppercase;
+  background: #fff;
+  color: var(--Linear-Gradient2);
+  outline: none;
+  border: 1px solid var(--Linear-Gradient2);
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.plans>.pro>button {
+  padding: .7rem 5rem;
+  text-transform: uppercase;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
